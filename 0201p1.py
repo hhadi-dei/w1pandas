@@ -1,5 +1,8 @@
 import pandas as pd
 import pandas as np
+import titanic
+
+titanic.func()
 #P1
 #1
 df = pd.DataFrame({"Name": ["Jacob", "Emily", "Peter","Camilla","Ulrika","Majd"], "Age": [22, 33, 34, 27, 26, 27], "Score": [123, 223, 132, 111, 321, None]})
