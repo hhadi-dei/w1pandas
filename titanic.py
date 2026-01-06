@@ -1,7 +1,11 @@
 import pandas as pd
 
 #2. Rename columns not to have any whitespaces or special characters.
+df = pd.read_csv("titanic.csv")
+df.columns = df.columns.str.replace(' ', '_')
 #3. For all persons under the age of 18, set "sex" column value to be "child“.
+df.loc[df['Age'] < 18, "Sex"] = "child"
+print(df)
 #4. Create a new DataFrame which displays the average fare per sex.
 #5. Create a new DataFrame which displays the average fare per sex and Pclass.
 #6. Create a new DataFrame which displays the average fare per survived column.
@@ -14,9 +18,5 @@ import pandas as pd
 
 
 
-df = pd.read_csv("titanic.csv")
-df.columns = df.columns.str.replace(' ', '_')
 
-df.loc[df['Age'] > 18, "Sex"] = "child"
-print(df)
 
